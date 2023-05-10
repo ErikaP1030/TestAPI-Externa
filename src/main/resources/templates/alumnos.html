@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Alumnos Started: Serving Web Content</title>
+
+	<head th:replace="~{layout :: head}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+
+<body>
+	<header th:replace="~{layout :: header}"> </header>
+	<div class="container">
+		<div class="notification is-primary">
+			
+				<p th:text="'actividad: ' + ${alumnos.actividad} " />
+				<p th:text="'codigo:  ' + ${alumnos.codigo} " />
+				<p th:text="'materia:  ' + ${alumnos.materia} " />
+				<p th:text="'id:  ' + ${alumnos.id} " />
+				<p th:text="'nombre:  ' + ${alumnos.nombre} " />
+			
+		</div>
+	
+	</div>
+	<br>
+	<br>
+	<footer th:replace="~{layout :: footer}"></footer>
+</body>
+
+</html>

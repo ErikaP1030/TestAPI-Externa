@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Dependia Started: Serving Web Content</title>
+
+	<head th:replace="~{layout :: head}">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+
+<body>
+	<header th:replace="~{layout :: header}"> </header>
+	<div class="container">
+		<div class="box">
+			<a href="/Directorio/Academico/CA" class="button">Coordinador Administrativo</a>
+			<a href="/Directorio/Academico/CCA" class="button">Coordinación de Civil y Administración</a>
+		</div>
+		<div class="box">
+			<p th:text="'Nombre: , ' + ${starDirectorioDTO.nombre} + '!'" />
+			<p th:text="'Area: ' + ${starDirectorioDTO.area} " />
+			<p th:text="'id: ' + ${starDirectorioDTO.id} " />
+			<p th:text="'Correo oficial:  ' + ${starDirectorioDTO.correooficial} " />
+			<p th:text="'Correo personal: ' + ${starDirectorioDTO.correopersonal} " />telefono
+			<p th:text="'Telefono: ' + ${starDirectorioDTO.telefono} " />
+		</div>
+	</div>
+	<br>
+	<br>
+	<footer th:replace="~{layout :: footer}"></footer>
+</body>
+
+</html>
